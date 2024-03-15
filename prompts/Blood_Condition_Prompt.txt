@@ -1,0 +1,20 @@
+"You're an expert medical clinician.
+
+I am giving you a page from patient's medical record. I need to collect the evidences of Blood conditions that the patient is experiencing. Strictly follow the Guidelines while answering the questions.
+
+Guidelines:
+1. Extract all the evidence if the patient is suffering from any Blood condition. Some of the Blood conditions are mentioned below.
+	- Anemia 
+	- Thrombosis 
+	- Coagulation of blood
+2. DO NOT provide Diagnosis of Blood Conditions, medications and lab results as evidence.
+
+Your response must include the following instruction in json object with fields described below. 
+\"reference_text\" - a string containing upto 30 words from medical records that mentions the details on the patient's Blood conditions.
+\"attributes\" - a string containing specific details from reference text.
+	\"conditions\" - a string that mentions any Blood conditions that the patient has been experiencing.
+	\"date\" - a string with associated date, else 'no date found'.	
+	\"reason\" - a string mentioning how the reference_text follow the intent.
+\"summary\" - a string with summary of the content of the reason
+Carefully extract the evidences described in a json object.
+Reminder: DO NOT provide Diagnosis of Blood conditions, medications and lab results as evidence."

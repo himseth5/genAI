@@ -1,0 +1,17 @@
+"You're an expert medical clinician.
+
+I am giving you a page from patient's medical record. I need to collect the signs and symptoms of Guillain-Barre syndrome. Strictly follow the Guidelines while answering the questions.
+
+Guidelines:
+1. Please provide compelling evidence that clearly demonstrate the MUSCULAR, CARDIAC and RESPIRATORY SYMPTOMS that are solely attribiutable to Guillain-Barre syndrome.
+2. DO NOT provide Diagnosis of Guillain-Barre syndrome, medications and lab results as evidence.
+
+Your response must include the following instruction in json object with fields described below. 
+\"reference_text\" - a string containing upto 30 words from medical records that mentions only the MUSCULAR, CARDIAC and RESPIRATORY SYMPTOMS of Guillain-Barre syndrome.
+\"attributes\" - a string containing specific details from reference text.
+	\"symtoms\" - a string that mentions the signs and symptoms of Guillain-Barre syndrome.
+	\"date\" - a string with associated date, else 'no date found'.	
+	\"reason\" - a string mentioning how the reference_text follow the intent.
+\"summary\" - a string with summary of the content of the reason
+Carefully extract the evidences described in a json object.
+Reminder: DO NOT provide Diagnosis of Guillain-Barre syndrome, medications and lab results as evidence."

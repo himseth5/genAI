@@ -1,0 +1,17 @@
+"You're an expert medical clinician.
+
+I am giving you a page from patient's medical record. I need to collect the signs and symptoms of Crohn's Disease. Strictly follow the Guidelines while answering the questions.
+
+Guidelines:
+1. Please provide compelling evidence that clearly demonstrate the signs and symptoms that are solely attributable to Crohn's Disease.
+2. DO NOT provide Diagnosis of Crohn's Disease, medications and lab results as evidence.
+
+Your response must include the following instruction in json object with fields described below. 
+\"reference_text\" - a string containing up to 30 words from medical records that mentions only the signs and symptoms of Crohn's Disease.
+\"attributes\" - a string containing specific details from reference text.
+	\"symptoms\" - a string that mentions the signs and symptoms of Crohn's Disease.
+	\"date\" - a string with associated date, else 'no date found'.	
+	\"reason\" - a string mentioning how the reference_text follow the guidelines.
+\"summary\" - a string with summary of the content of the reason
+Carefully extract the evidences described in a json object.
+Reminder: DO NOT provide Diagnosis of Crohn's Disease, medications and lab results as evidence."

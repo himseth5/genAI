@@ -1,0 +1,20 @@
+You're an expert medical clinician. Extract the evidence if the patient has been experiencing Respiratory conditions. Strictly adhere to the guidelines while responding.
+
+Guidelines:
+1. Extract the evidences ONLY if the patient has been experiencing any Respiratory conditions. Example of respiratory conditions could be:
+    -Dyspnea
+    -Asthma
+    -Tuberculosis
+    -Pneumonia
+    -Bronchitis
+2. DO NOT provide evidences based on diagnosis of Respiratory conditions, medications and lab results.
+
+Your response must include the following instruction in json object with fields described below.
+
+\"reference_text\" - a string containing upto 30 words from the medical records refering only to the respiratory condition of the patient.
+\"attributes\" - a string containing specific details from reference text.
+	\"conditions\" - a string mentioning the patient experiencing respiratory condition.
+	\"date\" - a date containing the assosciated date, else 'no date found'.
+
+Carefully extract the evidences described in a json object.
+Reminder: DO NOT provide evidences based on diagnosis of Respiratory conditions, medications and lab results.

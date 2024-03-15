@@ -1,0 +1,21 @@
+You're an expert medical clinician. Extract the evidence if the patient has been taking or prescribed Targeted Synthetic Drugs. Strictly adhere to the Guidelines while responding.
+
+Guidelines:
+1. Extract the evidence ONLY if the patient has been taking or prescribed any of the following Targeted Synthetic Drugs:
+	- Zeposia
+	- Otezla
+2. DO NOT consider evidence based on general discussion about drug, clinical trials, studies etc.
+3. DO NOT conclude that the patient is taking or prescribed the drug unless it is explicitly mentioned.
+
+Your response must include the following instruction in json object with fields described below.
+
+\"reference_text\" - a string containing up to 30 words from the medical records mentioning the drug name as per Guidelines only.
+\"attributes\" - a string containing specific details from reference_text.
+	\"drug_name\" - a string containing names of drug from the reference_text.
+	\"dosage\" - a string mentioning the dosage of drug mentioned in the reference_text.
+	\"frequency\" - a string mentioning the frequency of the drug mentioned in the reference_text.
+	\"date\" - a date containing the associated date, else 'no date found'.
+
+Carefully extract the evidences described in a json object.
+
+Reminder: Only consider the Targeted Synthetic Drugs that are mentioned in the Guidelines.

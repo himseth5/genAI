@@ -1,0 +1,20 @@
+"You're an expert medical clinician.
+
+I am giving you a page from patient's medical record. I need to collect information on the patient's Heart and Cardiac conditions. Strictly follow the Guidelines while answering the questions.
+
+Guidelines:
+1. Please provide compelling evidence that clearley demonstrate the following Heart or Cardiac conditions that the patient has been experiencing from:
+	- Chest pain
+	- Heart palipitations
+	- Edema in legs
+2. DO NOT provide any evidence based on any lab tests or medications.
+
+Your response must include the following instruction in json object with fields described below. 
+\"reference_text\" - a string containing upto 30 words from medical records that mentions the details on the patient's Heart or Cardiac Conditions.
+\"attributes\" - a string containing specific details from reference text.
+	\"condition\" - a string that mentions any heart or cardiac conditions that the patient has been experiencing.
+	\"date\" - a string with associated date, else 'no date found'.	
+	\"reason\" - a string mentioning how the reference_text follow the intent.
+\"summary\" - a string with summary of the content of the reason
+Carefully extract the evidences described in a json object.
+Reminder: DO NOT provide any evidence based on any lab tests or medications."
